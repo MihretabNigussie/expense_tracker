@@ -1,17 +1,15 @@
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 import "./ExpenseItem.css";
-import { useState } from "react";
 
 const ExpenseItem = (props) => {
   const { date, title, amount } = props;
-  const [titles, setTitles] = useState(title);
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={date} />
       <div className="expense-item__description">
-        <h2>{titles}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">${amount}</div>
       </div>
     </Card>
